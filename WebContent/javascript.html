@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Java Script Test</title>
+	<style >
+	body.dark{
+		background-color: black; 
+		font-style: italic;
+		color: white;
+	}	
+	body.white{
+		background-color: white;
+	}
+	</style>
+	
+</head>
+<body class="dark" id="mainbody">
+
+<ul>
+	<script >
+		for ( i = 0; i < 10; i++) {
+		document.write('<li>'+i+'</li>');
+		}		
+	</script>
+</ul>
+
+
+<input type="button" value="click" onclick="alert('1');" />
+
+<input type="button" value="white" onclick="document.getElementById('mainbody').setAttribute('class', '')">
+<input type="button" value="black" onclick="document.getElementById('mainbody').setAttribute('class', 'dark')">	
+	
+
+</body>
+</html>
