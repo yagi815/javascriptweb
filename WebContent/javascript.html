@@ -12,6 +12,20 @@
 	body.white{
 		background-color: white;
 	}
+	
+	.active {
+	color:red;
+	border: 1px solid red;
+	width: 200px;
+	/*float: left;*/
+	}
+	.inactive {
+	color:gray;
+	border: 1px solid gray;
+	width: 200px;
+	}
+}
+	
 	</style>
 	
 </head>
@@ -19,9 +33,21 @@
 
 <ul>
 	<script >
-		for ( i = 0; i < 10; i++) {
+		for ( i = 0; i < 3; i++) {
 		document.write('<li>'+i+'</li>');
 		}		
+		
+		
+		
+		function setcolor(mode){
+	         if(mode){                          
+	            // $('#header, #nav').hide();
+	            document.getElementById('target').setAttribute('class','inactive')"
+	         } else {
+	             //$('#header, #nav').show();
+	            document.getElementById('target').setAttribute('class','active')"
+	         }
+	       }
 	</script>
 </ul>
 
@@ -30,6 +56,23 @@
 
 <input type="button" value="white" onclick="document.getElementById('mainbody').setAttribute('class', '')">
 <input type="button" value="black" onclick="document.getElementById('mainbody').setAttribute('class', 'dark')">	
+	
+	
+	
+	<div id="target">hello world</div>
+	<script >
+		document.getElementById('target').innerHTML = "world hello";
+		document.getElementById('target').setAttribute("class","active");
+	</script>
+	
+	<!--  
+ 	<input type="button" value="click" 
+ 	 onmouseover="document.getElementById('target').setAttribute('class','inactive')" />
+ 	 -->
+ 	<input type="button" value="click1" onmouseover="setcolor(true);" />
+ 	<input type="button" value="click2" onmouseover="setcolor(false);" />
+	
+	
 	
 
 </body>

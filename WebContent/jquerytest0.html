@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+	<div id="target">Hello world!</div>
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script>
+	
+		var check = true;
+		
+		function ch() {
+		//	alert('akj:');
+			$('#target').html('World aaa);
+	
+	 		if (check == true){
+	 			$('#target').css('background-color', 'green')"
+	 			check = false;
+	 		}else{
+	 			$('#target').css('background-color', 'white')"
+	 			check = true;
+	 		}
+		}
+		
+	$('#target').html('World Hello');
+	</script>
+
+	<script>
+		 function ani() {
+			 
+		  $('#target').css('font-size','100px');
+		  $('#target').css('color','blue').css('textDecoration','underline');
+		
+		  $('#target' ).animate({
+			    opacity: 0.25,
+			    left: "+=50",
+			    height: "toggle"
+			  }, 1000 );
+		 }
+	</script>
+
+	<button onclick='ch()';>cha</button>
+	<button onclick='ani()';">ani</button>
+	
+
+</body>
+</html>
+
+
+
