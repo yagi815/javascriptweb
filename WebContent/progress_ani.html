@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+
+<style type="text/css">
+/* @import */
+/* 	url('http://twitter.github.com/bootstrap/assets/css/bootstrap.css'); */
+
+/* .container { */
+/* 	margin-top: 30px; */
+/* 	width: 400px; */
+/* } */
+​
+$(document).ready(function(){
+
+    var progress = setInterval(function() {
+    var $bar = $('.bar');
+
+    if ($bar.width()>=400) {
+        clearInterval(progress);
+        $('.progress').removeClass('active');
+    } else {
+        $bar.width($bar.width()+40);
+    }
+    $bar.text($bar.width()/4 + "%");
+}, 800);
+
+});​
+​
+</style>
+
+</head>
+<body>
+
+
+<div class="container">
+    <div class="progress progress-striped active">
+        <div class="bar" style="width: 0%;"></div>
+    </div>
+</div>
+
+
+
+</body>
+</html>
