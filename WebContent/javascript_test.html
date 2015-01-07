@@ -3,6 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+<style>
+	.AA{
+	font-size: 50px;
+	}
+	.BB{
+	font-size: 100px;
+	}
+</style>
 </head>
 <body>
 	<div id='target'>Hello World</div>
@@ -11,22 +21,50 @@
 		</script>
 	
 
-	<nav>
-		<ol>
-			<li>JavaScript?</li>
-			<li>변수와 상수</li>
-			<li>연산자</li>
-		</ol>		
-	</nav>
-	<article>
-		JavaScript?
-		<div>
-			구상은 머릿속의 도화지에 그린 그림 1
-		</div>
-		<div>
-			구상은 머릿속의 도화지에 그린 그림 2
-		</div>
-	</article>
+<script>
+
+	
+	
+	
+$( "div" ).one( "focus mouseover keydown", firstEvent);
+function firstEvent( eventObject ) {
+console.log( "A " + eventObject.type + " event occurred for the first time on the input with id " + this.id );
+}
+$("div").hover(function() {
+	$( "div" ).toggleClass( "BB" );
+});
+
+
+
+$( "#helloBtn" ).click(function( event ) {
+	alert( "Hello." );
+	});
+	
+//Attach a directly bound event handler
+$( "#list a" ).on( "click", function( event ) {
+event.preventDefault();
+console.log( $( this ).text() );
+});
+
+
+</script>
+
+<button id="helloBtn">Say hello</button>
+
+
+<a href="http://ffff.com" class = "AA">a</a>
+<div>div section</div>
+
+
+<div id="container">
+<ul id="list">
+<li><a href="http://domain1.com">Item #1</a></li>
+<li><a href="/local/path/1">Item #2</a></li>
+<li><a href="/local/path/2">Item #3</a></li>
+<li><a href="http://domain4.com">Item #4</a></li>
+</ul>
+</div>
+</body>
 
 
 </body>
