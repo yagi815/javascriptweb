@@ -66,31 +66,7 @@ InstallOSGBestmanSE < Documentation/Release3 < TWiki
 twiki.grid.iu.edu › ... › Documentation/Release3 Web › InstallBestPractices
 May 29, 2014 - Each user in this file should be created on the server. .... This step ensures that any local modifications to *.repo files will not prevent installing the new 3.2 .... partition and have a symlink from /var/log/bestman2 to that directory.
 You visited this page on 12/22/14.
-InstallHadoop200SE < Documentation/Release3 < TWiki
-twiki.grid.iu.edu › TWiki › Documentation/Release3 Web
-Oct 17, 2014 - The namenode and secondary namenode need to have a directory ... Hadoop and prevent its components from starting up successfully. ... Each user in this file should be created on the server. ..... BeStMan2 SRM uses the Hadoop FUSE mount to perform namespace operations, such as mkdir, rm, and ls.
-InstallHadoopSE < Documentation/Release3 < TWiki
-twiki.grid.iu.edu › ... › Documentation/Release3 Web › NavAdminStorage
-May 22, 2014 - The 3.1 series continues to support all packages that have been released ... confuse Hadoop and prevent its components from starting up successfully. ..... [root@client ~]$ mkdir -p /mnt/hadoop/cms/store/user/tanyalevshina ..... Next, you will have to modify /etc/bestman2/conf/bestman2.rc and change ...
-OpsProceduresWishlist < EOS < TWiki
-twiki.cern.ch › TWiki › EOS Web
-Jan 19, 2012 - On SRM: /var/log/bestman2/event.log (auto-rotates, may need to check .1, .2 ..) - contains info on each request (type, DN, filename - but not the client IP!) ... actual location of the data file and block checksum file ( THE_FXID.xsmap ), then look at ... (assuming that users have reported an issue (size mismatch, ...
-OpportunisticStorageForLIGOBInspiral < Storage < TWiki
-https://twiki.opensciencegrid.org/.../OpportunisticStorageForLIGOBInspi...
-May 11, 2011 - srm-copy should work with rfc complient proxy; srm-copy -mkdir ... SFN=/lustre/raidl/user/ligo/, Error, MountInfo set to none, ~1TB ... Increase timeout limit from 1800 secs to 3600 sec to avoid timeout ... Elapsed time for transferring 100 files 16MB each using srm-copy ... Both sites have BeStMan2 installed.
-NTFS Permissions - Best way to stop people creating crap in root ...
-arstechnica.com/civis/viewtopic.php?f=17&t=1201031
-Apr 10, 2013 - 19 posts - ‎13 authors
-Auth users: get only List Folder / Read Data via the Advanced NTFS ... Then on each subfolder remove inheritance from the root, and assign the ...
-[PDF]EOS Manual
-wiki.ipb.ac.rs/images/f/f7/Eos-manual.pdf
-user or shared in multi user mode with strong authentication via a FUSE ... Block-level checksumming (algorithm as before) for 4k, 64k, 128k, 256k, ... support for write-once, delete never directories as sandboxes ... All message queues are in-memory and not persistent in case of .... This is an example file for bestman2.rc:.
-Berkeley Storage Manager
-https://sdm.lbl.gov/bestman/docs/bestman-guide.html
-Feb 13, 2009 - End users may have their own personal BeStMan that manages and provides an ... BeStMan supports secure directory management where files are .... For each option, choose the value that fits your environment. ..... =[300]path=/bestman/cache;[200]path=/bestman2/cache ... Number of active users limit.
-Restrict Linux users to their home directories only - nixCraft
-www.cyberciti.biz/faq/restrict-linux-users-to-their-home-directories-only/
-Aug 17, 2006 - Changing directories with cd; Setting or unsetting the values of ... 20 Linux System Monitoring Tools Every SysAdmin Should Know ... I only want to restrict user only and only and only can have access to his home directory .
+
 
 </div>
 
@@ -104,29 +80,52 @@ Aug 17, 2006 - Changing directories with cd; Setting or unsetting the values of 
 
 
 	DISK1
-	<div id="disk1" class="progress progress-striped active">
-	</div>
-
-<script type="text/javascript">
-$('#disk1').width("90%");
-$('#disk1').text("90%");
-</script>	
+	<div id="disk1" class="progress progress-striped active"></div>
 
 	<script type="text/javascript">
-// 		$('#disk1').progressbar({
+		$('#disk1').width("50%");
+		$('#disk1').text("80%");
+	</script>
+
+	<script type="text/javascript">
+		// 		$('#disk1').progressbar({
+		// 			warningMarker : 60,
+		// 			dangerMarker : 80,
+		// 			maximum : 100,
+		// 			step : 5
+		// 		});
+	</script>
+
+	<br> DISK2
+	<div id="progressbar0" class="progress active"></div>
+
+	<script type="text/javascript">
+// 		$('#progressbar0').progressbar({
 // 			warningMarker : 60,
 // 			dangerMarker : 80,
 // 			maximum : 100,
 // 			step : 5
 // 		});
+ 		$('#progressbar0').html("30%"); 	
+ 		$('#progressbar0').text("40%");
+ 		$('#progressbar0').progressbar({warningMarker:60});
+ 		$('#progressbar0').css('with','90%');
+
+
 	</script>
 
-<br>
-	DISK2
-	<div id="progressbar"></div>
+	<br> DISK3
+	<div class="progress">
+		<div class="bar bar-success" style="width: 35%;"></div>
+		<div class="bar bar-warning" style="width: 20%;"></div>
+		<div class="bar bar-danger" style="width: 10%;"></div>
+	</div>
+
+	DISK4
+	<div id="progressbar1" class="bar bar-sucess"></div>
 
 	<script type="text/javascript">
-		$('#progressbar').progressbar({
+		$('#progressbar1').progressbar({
 			warningMarker : 60,
 			dangerMarker : 80,
 			maximum : 100,
@@ -134,30 +133,8 @@ $('#disk1').text("90%");
 		});
 	</script>
 
-<br>
-DISK3
-
-	<div class="progress">
-                        <div class="bar bar-success" style="width: 35%;"></div>
-                        <div class="bar bar-warning" style="width: 20%;"></div>
-                        <div class="bar bar-danger" style="width: 10%;"></div>
-                </div>
-      DISK4
-      
-<div id="progressbar">
-</div>
-
-<script type="text/javascript">
-$('#progressbar').progressbar({
-    warningMarker: 60,
-    dangerMarker: 80,
-    maximum: 100,
-    step: 5
-});
-</script>
 
 
-      
 
 </body>
 </html>
