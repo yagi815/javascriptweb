@@ -46,10 +46,16 @@ $( document ).ready(function() {
 </script>
 
 <script type="text/javascript">
-// $('#myStathalf3').text-data("100") ;
-// $( "#elem" ).progressbar({ value: 20 });
-// $( "#myStathalf3" ).text-data({ value: 20 });
-$( "#myStathalf3" ).circliful().html("100");
+$(function () {
+    $('#myStathalf3').each(function () {
+        $(this).progressbar();
+        //var value = $(this).attr('data-value');
+        //alert(value);
+        var value = 99;
+        $(this).progressbar('option', 'value', parseInt($(this).attr('data-value')));
+    });
+});
+
 </script>
 </body>
 </html>

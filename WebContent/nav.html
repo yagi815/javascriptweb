@@ -38,62 +38,58 @@
 
 
 
-<div class="row">
-	<div class="span12 hero-unit title-main">
+	<div class="row">
+		<div class="span12 hero-unit title-main">
 			<center>
-			 <h3>Main Title </h3>
+				<h3>Main Title</h3>
 			</center>
+		</div>
 	</div>
-</div>
 
-<div class="row">
-			<nav  class="span4" >
-				<ul class="nav  nav-tabs  nav-stacked">
-					<li><a href="#">JavaScript란 무엇인가?   자바 스크립트 </a></li>
-					<li><a href="#">변수</a></li>
-					<li><a href="#">상수</a></li>
-					<li><a href="#">반복문</a></li>
-					<li><a href="#">조건문</a></li>
-				</ul>
-			</nav>
-					
-			
-			
-
-<div class="span8">
-
-InstallOSGBestmanSE < Documentation/Release3 < TWiki
-twiki.grid.iu.edu › ... › Documentation/Release3 Web › InstallBestPractices
-May 29, 2014 - Each user in this file should be created on the server. .... This step ensures that any local modifications to *.repo files will not prevent installing the new 3.2 .... partition and have a symlink from /var/log/bestman2 to that directory.
-You visited this page on 12/22/14.
-
-
-</div>
-
-
-     
+	<div class="row">
+		<nav class="span4">
+			<ul class="nav  nav-tabs  nav-stacked">
+				<li><a href="#">JavaScript란 무엇인가? 자바 스크립트 </a></li>
+				<li><a href="#">변수</a></li>
+				<li><a href="#">상수</a></li>
+				<li><a href="#">반복문</a></li>
+				<li><a href="#">조건문</a></li>
+			</ul>
+		</nav>
 
 
 
 
-</div>
+		<div class="span8">InstallOSGBestmanSE < Documentation/Release3
+			< TWiki twiki.grid.iu.edu › ... › Documentation/Release3 Web ›
+			InstallBestPractices May 29, 2014 - Each user in this file should be
+			created on the server. .... This step ensures that any local
+			modifications to *.repo files will not prevent installing the new 3.2
+			.... partition and have a symlink from /var/log/bestman2 to that
+			directory. You visited this page on 12/22/14.</div>
 
+
+
+	</div>
 
 	DISK1
 	<div id="disk1" class="progress progress-striped active"></div>
 
-	<script type="text/javascript">
-		$('#disk1').width("50%");
-		$('#disk1').text("80%");
-	</script>
+<!-- 	<script type="text/javascript">
+// 		$('#disk1').width("50%");
+// 		$('#disk1').text("80%");
+ 	</script> -->
 
 	<script type="text/javascript">
-		// 		$('#disk1').progressbar({
-		// 			warningMarker : 60,
-		// 			dangerMarker : 80,
-		// 			maximum : 100,
-		// 			step : 5
-		// 		});
+	//$('#disk1').progressbar('option', "value", parseInt($('#disk1').attr('data-value'), 10));
+	$(function () {
+    $('#disk1').each(function () {
+        $(this).progressbar();
+        //var value = $(this).attr('data-value');
+        //alert(value);
+        $(this).progressbar('option', 'value', parseInt($(this).attr('data-value')));
+    });
+});​
 	</script>
 
 	<br> DISK2

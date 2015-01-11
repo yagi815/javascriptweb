@@ -38,26 +38,28 @@
 
 
 <script type="text/javascript">
-jQuery(function ($) {
-	$('#code1').click(function () {
-	    var val = 33 + '%';
-	    $('.progress-bar').width(val).text(val)
-	})
-	});
+// 	jQuery(function ($) {
+// 	$('#code1').click(function () {
+// 	    var val = 33 + '%';
+// 	    $('.progress-bar').width(val).text(val);
+// 			console.log( "btn clicked!!" );
 
-	jQuery(function ($) {
-	$('#code2').click(function () {
-	    var val = 34 + '%';
-	    $('.progress-bar').width(val).text(val)
-	})
-	});
+// 	})
+// 	});
 
-	jQuery(function ($) {
-	$('#code3').click(function () {
-	    var val = 33 + '%';
-	    $('.progress-bar').width(val).text(val)
-	})
-	});
+// 	jQuery(function ($) {
+// 	$('#code2').click(function () {
+// 	    var val = 34 + '%';
+// 	    $('.progress-bar').width(val).text(val)
+// 	})
+// 	});
+
+// 	jQuery(function ($) {
+// 	$('#code3').click(function () {
+// 	    var val = 33 + '%';
+// 	    $('.progress-bar').width(val).text(val)
+// 	})
+// 	});
 	
 	
 // 	$(function() {
@@ -70,16 +72,33 @@ jQuery(function ($) {
 // 		});
 
 		
-		
-		$(function() {
-			var clicks = 0;
-			 $('.code-button').on('click', function() {
-			  clicks++;
-			  var percent = Math.min(Math.round(clicks / 3 * 100), 100);
-			  $('.progress-bar').width(percent + '%').text(percent + '%');
-			 });
-			});
 
+// 	$(function() {
+// 		var clicks = 0;
+// 		$('#code1').on('click', function() {
+// 			clicks++;
+// 			var percent = Math.min(Math.round(clicks / 3 * 100), 100);
+// 			$('.progress-bar').width(percent + '%').text(percent + '%');
+// 			console.log( "btn clicked!!" );
+
+
+// 		});
+// 	});
+	
+	
+	
+	
+	
+	// new 
+	$('#code1').on('click', function() {
+			clicks++;
+			var percent = Math.min(Math.round(clicks / 3 * 100), 100);
+			$('.progress-bar').width(percent + '%').text(percent + '%');
+			console.log( "btn clicked!!" );
+
+
+		});
+	
 </script>
 
 
@@ -96,15 +115,15 @@ jQuery(function ($) {
         <div class="main-action row">
 
            <div class="col-md-4 col-sm-4">
-           <button id="code1" type="button" class="btn btn-lg btn-block btn-warning"><i class="fa fa-facebook"></i>&nbsp; &nbsp; Share</button>
+           <button id="code1" type="button" class="btn btn-lg btn-block btn-warning"><i class="fa fa-facebook"></i> Share</button>
            </div>
 
            <div class="col-md-4 col-sm-4">
-           <button id="code2" type="button" class="btn btn-lg btn-block btn-info"><i class="fa fa-twitter"></i>&nbsp; &nbsp; Tweet</button>
+           <button id="code2" type="button" class="btn btn-lg btn-block btn-info"><i class="fa fa-twitter"></i>Tweet</button>
            </div>
 
            <div class="col-md-4 col-sm-4">
-           <button id="code3" type="button" class="btn btn-lg btn-block btn-success"><i class="fa fa-play"></i>&nbsp; &nbsp; Watch</button>
+           <button id="code3" type="button" class="btn btn-lg btn-block btn-success"><i class="fa fa-play"></i> Watch</button>
            </div>
 
         </div>
