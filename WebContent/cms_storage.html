@@ -33,6 +33,13 @@ div.title {
 	background: black;
 	font-style: white;
 }
+#float-menu{
+/* 	 position:absolute; */
+/*     top:30px; */
+/*     left:10%; */
+/*     margin-left:50px; */
+/*     width:200px; */
+}
 </style>
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"
 	media="screen">
@@ -57,7 +64,7 @@ div.title {
 		</center>
 	</div>
 
-	<ul class="nav nav-pills">
+	<ul class="nav nav-pills" id="float-menu">
 <!-- 		<li class="active"><a href="#">Home</a></li> -->
 		<li><a href="#">Home</a></li>
 		<li><a href="#CONDOR-MON">condor </a></li>
@@ -77,23 +84,26 @@ div.title {
 <!-- 			</ul> -->
 <!-- 		</nav> -->
 
+<nav id="nav" class="span2">
+</nav>
+<!-- left span2 end -->
 
 
-		<nav id="nav" class="span12">
+		<nav id="nav" class="span8">
 
 			<!-- 	Condor Mon -->
 			<A NAME="CONDOR-MON" class="myclass"></A> <span
-				class="myclass  label label-success"><h4>[ CONDOR
-					MONITORING ]</h4></span> <br> <img class="img-rounded"
+				class="myclass  label label-success">[ CONDOR
+					MONITORING ]</span> <br> <img class="img-rounded"
 				src="rrd/condor_q_rrd.gif"><br> <img class="img-rounded"
 				src="rrd/condor_q_idle_rrd.gif"><br>
 
 
 
 			<!-- Storage Mon -->
-			<A NAME="STORAGE-MON"><A> <span
-					class="myclass  label label-success"><h4>[ STORAGE
-							MONITORING ]</h4></span> <br> <!-- 	DATA STATUS	 -->
+			<A NAME="STORAGE-MON"><A> <span	class="myclass  label label-success">[ STORAGE
+							MONITORING ]</span> <br>
+							 <!-- 	DATA STATUS	 -->
 					<div class="" id="cms_data_dec"></div>
 					<div class="progress" id="cms_data">
 						<div class="bar" id="cms_data_bar"></div>
@@ -109,119 +119,17 @@ div.title {
 						<div class="bar" id="cms_data_bar"></div>
 						<div class="bar" id="cms_user_bar"></div>
 					</div> <!-- 		Ganlgia --> <A NAME="GANGLIA"><A> <span
-							class="myclass  label label-success"><h5>[ GANGLIA ]</h5></span>
+							class="myclass  label label-success"> [ GANGLIA ] </span>
 							<br>
 
-							<DIV>
-
-								<!--ui10 -->
-								<img
-									src="http://134.75.124.254/ganglia/graph.php?g=network_report&z=medium&c=CMS%20Condor%20cms-sejong&h=ui10.sdfarm.kr&m=load_one&r=month&s=descending&hc=4&mc=2&st=1395278846">
-								<img
-									src="http://134.75.124.254/ganglia/graph.php?g=network_report&z=medium&c=CMS%20Condor%20cms-sejong&h=ui10.sdfarm.kr&m=load_one&r=week&s=descending&hc=4&mc=2&st=1395278846">
-								<img
-									src="http://134.75.124.254/ganglia/graph.php?g=network_report&z=medium&c=CMS%20Condor%20cms-sejong&h=ui10.sdfarm.kr&m=load_one&r=day&s=descending&hc=4&mc=2&st=1395278846">
-								<br> <br>
-								<!--cms -->
-								<img
-									src="http://134.75.124.254/ganglia/graph.php?g=network_report&z=medium&c=CMS%20Condor%20cms-sejong&m=load_one&r=month&s=descending&hc=4&mc=2&st=1395121547">
-								<img
-									src="http://134.75.124.254/ganglia/graph.php?g=network_report&z=medium&c=CMS%20Condor%20cms-sejong&m=load_one&r=week&s=descending&hc=4&mc=2&st=1395121547">
-								<img
-									src="http://134.75.124.254/ganglia/graph.php?g=network_report&z=medium&c=CMS%20Condor%20cms-sejong&m=load_one&r=day&s=descending&hc=4&mc=2&st=1395121547">
-								<br> <br>
-								<!-- cms-se -->
-								<img
-									src="http://134.75.124.254/ganglia/graph.php?g=network_report&z=medium&c=CMS%20Condor%20cms-sejong&h=cms-se.sdfarm.kr&m=load_one&r=month&s=descending&hc=4&mc=2&st=1419559445">
-								<img
-									src="http://134.75.124.254/ganglia/graph.php?g=network_report&z=medium&c=CMS%20Condor%20cms-sejong&h=cms-se.sdfarm.kr&m=load_one&r=week&s=descending&hc=4&mc=2&st=1419559445">
-								<img
-									src="http://134.75.124.254/ganglia/graph.php?g=network_report&z=medium&c=CMS%20Condor%20cms-sejong&h=cms-se.sdfarm.kr&m=load_one&r=day&s=descending&hc=4&mc=2&st=1419559445"><br>
-								<br>
-								<!-- cms xrds01 -->
-								<img
-									src="http://134.75.124.254/ganglia/graph.php?g=network_report&z=medium&c=CMS%20Condor%20cms-sejong&h=cms-xrds01.sdfarm.kr&m=load_one&r=month&s=descending&hc=4&mc=2&st=1405432542">
-								<img
-									src="http://134.75.124.254/ganglia/graph.php?g=network_report&z=medium&c=CMS%20Condor%20cms-sejong&h=cms-xrds01.sdfarm.kr&m=load_one&r=week&s=descending&hc=4&mc=2&st=1405432542">
-								<img
-									src="http://134.75.124.254/ganglia/graph.php?g=network_report&z=medium&c=CMS%20Condor%20cms-sejong&h=cms-xrds01.sdfarm.kr&m=load_one&r=day&s=descending&hc=4&mc=2&st=1405432542">
-								<br> <br>
-								<!--cms squid -->
-								<img
-									src="http://134.75.124.254/ganglia/graph.php?g=network_report&z=medium&c=CMS%20Condor%20cms-sejong&h=cms-squid.sdfarm.kr&m=load_one&r=month&s=descending&hc=4&mc=2&st=1395278542">
-								<img
-									src="http://134.75.124.254/ganglia/graph.php?g=network_report&z=medium&c=CMS%20Condor%20cms-sejong&h=cms-squid.sdfarm.kr&m=load_one&r=week&s=descending&hc=4&mc=2&st=1395278542">
-								<img
-									src="http://134.75.124.254/ganglia/graph.php?g=network_report&z=medium&c=CMS%20Condor%20cms-sejong&h=cms-squid.sdfarm.kr&m=load_one&r=day&s=descending&hc=4&mc=2&st=1395278542">
-								<img
-									src="http://134.75.124.254/ganglia/graph.php?g=load_report&z=medium&c=CMS%20Condor%20cms-sejong&h=cms-squid.sdfarm.kr&m=load_one&r=month&s=descending&hc=4&mc=2&st=1395278542">
-								<img
-									src="http://134.75.124.254/ganglia/graph.php?g=load_report&z=medium&c=CMS%20Condor%20cms-sejong&h=cms-squid.sdfarm.kr&m=load_one&r=week&s=descending&hc=4&mc=2&st=1395278542">
-								<img
-									src="http://134.75.124.254/ganglia/graph.php?g=load_report&z=medium&c=CMS%20Condor%20cms-sejong&h=cms-squid.sdfarm.kr&m=load_one&r=day&s=descending&hc=4&mc=2&st=1395278542">
-								<br> <br> <br>
-
-
-								<h1>HCP Farm</h1>
-								<!--ui02 -->
-								<img
-									src="http://134.75.124.254/ganglia/graph.php?g=network_report&z=medium&c=HCP&h=ui02.sdfarm.kr&m=load_one&r=month&s=descending&hc=4&mc=2&st=1419559159">
-								<img
-									src="http://134.75.124.254/ganglia/graph.php?g=network_report&z=medium&c=HCP&h=ui02.sdfarm.kr&m=load_one&r=week&s=descending&hc=4&mc=2&st=1419559159">
-								<img
-									src="http://134.75.124.254/ganglia/graph.php?g=network_report&z=medium&c=HCP&h=ui02.sdfarm.kr&m=load_one&r=day&s=descending&hc=4&mc=2&st=1419559159">
-								<br>
-								<!--ce02 -->
-								<img
-									src="http://134.75.124.254/ganglia/graph.php?g=network_report&z=medium&c=HCP&h=ce02.sdfarm.kr&m=load_one&r=month&s=descending&hc=4&mc=2&st=1419559262">
-								<img
-									src="http://134.75.124.254/ganglia/graph.php?g=network_report&z=medium&c=HCP&h=ce02.sdfarm.kr&m=load_one&r=week&s=descending&hc=4&mc=2&st=1419559262">
-
-								<img
-									src="http://134.75.124.254/ganglia/graph.php?g=network_report&z=medium&c=HCP&h=ce02.sdfarm.kr&m=load_one&r=&s=descending&hc=4&mc=2&st=1419559262"><br>
-
-
-
-
-								<br> <br> <br>
-
-
-								<h1>STAR Farm</h1>
-								<!--ui03 -->
-								<br> <img
-									src="http://134.75.124.254/ganglia/graph.php?g=network_report&z=medium&c=STAR%20Condor%20star&h=ui03.sdfarm.kr&m=load_one&r=month&s=descending&hc=4&mc=2&st=1393998193">
-								<img
-									src="http://134.75.124.254/ganglia/graph.php?g=network_report&z=medium&c=STAR%20Condor%20star&h=ui03.sdfarm.kr&m=load_one&r=week&s=descending&hc=4&mc=2&st=1393998193">
-								<img
-									src="http://134.75.124.254/ganglia/graph.php?g=network_report&z=medium&c=STAR%20Condor%20star&h=ui03.sdfarm.kr&m=load_one&r=day&s=descending&hc=4&mc=2&st=1393998193">
-								<br>
-								<!--star -->
-								<img
-									src="http://134.75.124.254/ganglia/graph.php?g=network_report&z=medium&c=STAR%20Condor%20star&m=load_one&r=month&s=descending&hc=4&mc=2&st=1394510445">
-								<img
-									src="http://134.75.124.254/ganglia/graph.php?g=network_report&z=medium&c=STAR%20Condor%20star&m=load_one&r=week&s=descending&hc=4&mc=2&st=1394510445">
-								<img
-									src="http://134.75.124.254/ganglia/graph.php?g=network_report&z=medium&c=STAR%20Condor%20star&m=load_one&r=day&s=descending&hc=4&mc=2&st=1394510445">
-								<br>
-								<!--star db1-->
-								<img
-									src="http://134.75.124.254/ganglia/graph.php?g=load_report&z=medium&c=STAR%20Condor%20star&h=stardb1.sdfarm.kr&m=load_one&r=month&s=descending&hc=4&mc=2&st=1395300039">
-								<img
-									src="http://134.75.124.254/ganglia/graph.php?g=load_report&z=medium&c=STAR%20Condor%20star&h=stardb1.sdfarm.kr&m=load_one&r=week&s=descending&hc=4&mc=2&st=1395300039">
-								<img
-									src="http://134.75.124.254/ganglia/graph.php?g=load_report&z=medium&c=STAR%20Condor%20star&h=stardb1.sdfarm.kr&m=load_one&r=day&s=descending&hc=4&mc=2&st=1395300039">
-								<br>
-								<!--star db1-->
-								<img
-									src="http://134.75.124.254/ganglia/graph.php?g=load_report&z=medium&c=STAR%20Condor%20star&h=stardb2.sdfarm.kr&m=load_one&r=month&s=descending&hc=4&mc=2&st=1395300039">
-								<img
-									src="http://134.75.124.254/ganglia/graph.php?g=load_report&z=medium&c=STAR%20Condor%20star&h=stardb2.sdfarm.kr&m=load_one&r=week&s=descending&hc=4&mc=2&st=1395300039">
-								<img
-									src="http://134.75.124.254/ganglia/graph.php?g=load_report&z=medium&c=STAR%20Condor%20star&h=stardb2.sdfarm.kr&m=load_one&r=day&s=descending&hc=4&mc=2&st=1395300039">
-								<br> <br> <br>
-								<!-- links -->
-							</DIV> <A NAME="LINKS" class="myclass"><A> <span
-									class="myclass  label label-success"><h5>[ LINKS ]</h5></span>
+							
+							
+							
+							
+							
+							
+							<A NAME="LINKS" class="myclass"><A> <span
+									class="myclass  label label-success"> [ LINKS ] </span>
 
 
 
@@ -248,6 +156,10 @@ div.title {
 
 	</div>
 	<!-- 	span9 end  -->
+	
+	<nav id="nav" class="span2">
+	</nav>
+	<!-- 	right span2 end -->
 
 
 	<script>
@@ -266,9 +178,10 @@ div.title {
 		} else {// code for IE6, IE5
 			xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
 		}
-		xmlhttp.open("GET", "mydata/cms_storage.xml", false);
-		xmlhttp.send();
+		xmlhttp.open("GET", "mydata/cms_storage.xml", false);		
+		xmlhttp.send();		
 		xmlDoc = xmlhttp.responseXML;
+		
 
 		// 		document.write("<table><tr><th>DIR</th><th>Title</th></tr>");
 		var x = xmlDoc.getElementsByTagName("CD");
@@ -277,10 +190,8 @@ div.title {
 			var data_total = x[i].getElementsByTagName("DATA_TOTAL")[0].childNodes[0].nodeValue
 			var data_used = x[i].getElementsByTagName("DATA_USED")[0].childNodes[0].nodeValue
 			var data_percent = (data_used / data_total) * 100;
-			$('#cms_data_dec').append(
-					bytesToSize(data_used) + " / " + bytesToSize(data_total));
-			$('#cms_data_bar').width(data_percent + '%').text(
-					Math.floor(data_percent) + '%');
+			$('#cms_data_dec').append(bytesToSize(data_used) + " / " + bytesToSize(data_total));
+			$('#cms_data_bar').width(data_percent + '%').text(Math.floor(data_percent) + '%');
 
 		}
 		// 		document.write("</table>");
